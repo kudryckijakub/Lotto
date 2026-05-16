@@ -55,5 +55,17 @@ if losuj:
                 if trafione_liczby:
                     tekst_trafień = " ".join([f"🟢 **{liczba}**" for liczba in sorted(trafione_liczby)])
                     st.markdown(f"**Trafiłeś:** {tekst_trafień}")
+                    if len(trafione_liczby) == 3:
+                        st.markdown("🎉 *Trójka! Wygrałeś 24zł.*")
+                        st.balloons()
+                    elif len(trafione_liczby) == 4:
+                        st.markdown("🎉 *Czwórka! Wygrałeś 200zł.*")
+                        st.balloons()
+                    elif len(trafione_liczby) == 5:
+                        st.markdown("🎉 *Piątka! Wygrałeś 10 000zł.*")
+                        st.balloons()
+                    elif len(trafione_liczby) == 6:
+                        st.markdown("🎉 *Szóstka! Wygrałeś 2 000 000 zł*")
+                        st.balloons()
                 else:
                     st.markdown("❌ *Brak trafień tym razem.*")
